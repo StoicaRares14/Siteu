@@ -1,0 +1,88 @@
+import bcrypt from "bcryptjs";
+
+const data = {
+  users: [
+    {
+      name: "Rares",
+      email: "admin@example.com",
+      password: bcrypt.hashSync("1234", 8),
+      isAdmin: true,
+    },
+    {
+      name: "Jhon",
+      email: "user@example.com",
+      password: bcrypt.hashSync("1234", 8),
+      isAdmin: false,
+    },
+  ],
+  products: [
+    {
+      name: " Crimson Hunt",
+      author: "Gwen Forbes",
+      category: "Book",
+      image: "./images/carte.jpg",
+      price: 120,
+      countInStock: 10,
+      rating: 4.0,
+      numReviews: 10,
+      description: "Crime",
+    },
+    {
+      name: "Forge of Hades",
+      author: "Ameer Salgado",
+      category: "Book",
+      image: "./images/carte.jpg",
+      price: 100,
+      countInStock: 20,
+      rating: 4.0,
+      numReviews: 10,
+      description: "Fantasy",
+    },
+    {
+      name: "Quantum Nebula",
+      author: "Habib Kirkland",
+      category: "Book",
+      image: "./images/carte.jpg",
+      price: 220,
+      countInStock: 0,
+      rating: 4.8,
+      numReviews: 17,
+      description: "Sci-Fi",
+    },
+    {
+      name: "Naruto Ch.1",
+      author: "Masashi Kishimoto",
+      category: "Manga",
+      image: "./images/carte.jpg",
+      price: 78,
+      countInStock: 15,
+      rating: 1.0,
+      numReviews: 14,
+      description: "Adventure Fantasy",
+    },
+    {
+      name: "Berserk",
+      author: "Kentaro Miura",
+      category: "Manga",
+      image: "./images/carte.jpg",
+      price: 65,
+      countInStock: 5,
+      rating: 4.5,
+      numReviews: 10,
+      description: "Mystery Romance Fantasy",
+    },
+    {
+      name: "Secret of the Three-Inch Visitor",
+      author: "Michelle Beil",
+      category: "Book",
+      image: "!./images/carte.jpg",
+      price: 139,
+      countInStock: 12,
+      rating: 3.2,
+      numReviews: 15,
+      description: "Mystery",
+    },
+  ],
+};
+
+export default data;

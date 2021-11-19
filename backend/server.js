@@ -10,11 +10,10 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-mongoose.connect(
-  process.env.MONGODB_URL ||
-    "mongodb+srv://rares:rares@cluster0.4o9qa.mongodb.net/flipu?retryWrites=true&w=majority",
-  { useNewUrlParser: true, useUnifiedTopology: true }
-);
+mongoose.connect(process.env.MONGODB_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 app.use("/api/users", userRouter);
 app.use("/api/products", productRouter);
